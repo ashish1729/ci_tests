@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "javascript-development-environment",
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight course by Cory House",
