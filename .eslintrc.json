@@ -1,0 +1,32 @@
+// note that eslint json allows JS like comments
+
+{
+  // read more here https://eslint.org/docs/latest/use/configure/configuration-files#cascading-and-hierarchy
+  // this field tells that this is root of our project
+  // eslint has some cascading and you can put eslint config in individual directories as well
+  // for linting a file, it looks in current directory first and the keep goign to parent untill various conditions are met and one of them is `root:true` in the cnofig
+  "root": true,
+  // we are exting already existing rules
+  "extends": [
+    "eslint:recommended",
+    // plugins for ES6 imports
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  // version of language to target
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module"
+  },
+
+  // tells ESLint to expect some global variables which might be present in these environments
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  // we can override some rules
+  "rules": {
+    "no-console": 1 // 2 - Error, 1 - Warning, 0 - Off
+  }
+}

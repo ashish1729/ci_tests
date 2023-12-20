@@ -1,0 +1,5 @@
+{
+    "presets": [
+        "latest", // we want to use all the latest standardised JS features
+    ]
+}
